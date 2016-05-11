@@ -3,7 +3,7 @@ FROM ubuntu
 MAINTAINER saymagic "saymagic@163.com"
 
 # 安装JDK与nginx
-echo 'deb http://ftp.debian.org/debian/ stable main contrib non-free' >>/etc/apt/sources.list
+RUN echo 'deb http://ftp.debian.org/debian/ stable main contrib non-free' >>/etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install openjdk-7-jre -y
 RUN apt-get install openjdk-7-jdk -y
